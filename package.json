@@ -51,7 +51,8 @@
     "wait-on-dev": "wait-on -c ./build_scripts/wait-on-config.js http-get://localhost:8080",
     "wait-on-devs": "wait-on -c ./build_scripts/wait-on-config.js https-get://localhost:8080",
     "wait-on-neo4j": "wait-on -c ./build_scripts/wait-on-config.js http-get://localhost:7474",
-    "wait-on-neo4js": "wait-on -c ./build_scripts/wait-on-config.js https-get://localhost:7473"
+    "wait-on-neo4js": "wait-on -c ./build_scripts/wait-on-config.js https-get://localhost:7473",
+    "build-sandbox-browser": "npm run prepare-jar && npm run version && npm run version-pom && npm run build && mvn package"
   },
   "lint-staged": {
     "linters": {

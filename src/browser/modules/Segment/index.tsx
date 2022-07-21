@@ -121,7 +121,9 @@ export class Segment extends Component<any> {
               const { category, label, data } = metricsData
               window.analytics.track(category + '-' + label, {
                 ...data,
-                desktop: inDesktop
+                desktop: inDesktop,
+                /* @SandboxCustomCode */
+                isSandbox: true
               })
             }
 
