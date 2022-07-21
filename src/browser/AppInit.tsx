@@ -59,6 +59,9 @@ import reducers from 'shared/rootReducer'
 import { getTelemetrySettings } from 'shared/utils/selectors'
 import { URL } from 'whatwg-url'
 
+/* @SandboxCustomCode */
+import SandboxAuth from './modules/App/SandboxSidebar/SandboxAuth'
+
 // Configure localstorage sync
 applyKeys(
   'connections',
@@ -290,7 +293,11 @@ const AppInit = (): JSX.Element => {
       <BusProvider bus={bus}>
         <ApolloProvider client={client}>
           <DndProvider backend={HTML5Backend}>
-            <App />
+            {/* @SandboxCustomCode */}
+            {/* <App /> */}
+            <SandboxAuth>
+              <App />
+            </SandboxAuth>
           </DndProvider>
         </ApolloProvider>
       </BusProvider>
