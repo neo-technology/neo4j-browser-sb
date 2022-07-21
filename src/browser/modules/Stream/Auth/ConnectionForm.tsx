@@ -430,7 +430,9 @@ export class ConnectionForm extends Component<any, ConnectionFormState> {
         />
       )
     }
-    return view
+    /* Sandbox Custom Code */
+    // return view
+    return view || null
   }
 }
 
